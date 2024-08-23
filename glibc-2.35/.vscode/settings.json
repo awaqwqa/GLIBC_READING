@@ -1,0 +1,20 @@
+{
+  "files.associations": {
+    "*.tcc": "c",
+    "streambuf": "c",
+    "algorithm": "c",
+    "cstdlib": "c",
+    "typeinfo": "cpp",
+    "libiop.h": "c",
+    "cmath": "c",
+    "exception": "c",
+    "memory_resource": "c",
+    "iosfwd": "c",
+    "new": "c",
+    "ostream": "c",
+    "sstream": "c",
+    "stop_token": "c",
+    "memory": "c",
+    "numbers": "c"
+  }
+}
