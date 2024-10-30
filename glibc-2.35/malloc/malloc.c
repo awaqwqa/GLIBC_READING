@@ -3874,8 +3874,7 @@ _int_malloc(mstate av, size_t bytes)
     if (in_smallbin_range(nb))
     {
         // 获取在bin链中的位置
-        idx = smallbin_index(nb);
-        // 获取对应大小区间的smallbin链头
+        idx = smallbin_index(nb); // 获取对应大小区间的smallbin链头
         bin = bin_at(av, idx);
         // 查看链中最后一个chunk是否不等于bin 也就是检测链中是否只有一个chunk
         if ((victim = last(bin)) != bin)

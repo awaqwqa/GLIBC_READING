@@ -159,8 +159,7 @@ static mchunkptr dumped_main_arena_start; /* Inclusive.  */
 static mchunkptr dumped_main_arena_end;   /* Exclusive.  */
 
 /* True if the pointer falls into the dumped arena.  Use this after
-   chunk_is_mmapped indicates a chunk is mmapped.  */
-#define DUMPED_MAIN_ARENA_CHUNK(p) \
+   chunk_is_mmapped indicates a chunk is mmapped.  */=
   ((p) >= dumped_main_arena_start && (p) < dumped_main_arena_end)
 
 /* The allocator functions.  */
@@ -168,7 +167,7 @@ static mchunkptr dumped_main_arena_end;   /* Exclusive.  */
 static void *
 __debug_malloc (size_t bytes)
 {
-  void *(*hook) (size_t, const void *) = atomic_forced_read (__malloc_hook);
+  void *(*hook) (size_t, const void *) =   (__malloc_hook);
   if (__builtin_expect (hook != NULL, 0))
     return (*hook)(bytes, RETURN_ADDRESS (0));
 
